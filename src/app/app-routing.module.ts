@@ -24,3 +24,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+export const routingComponent = [ LoginComponent, DashboardComponent, CreateMedicamentosComponent, UpdateMedicamentosComponent, CreatePromocionesComponent, UpdatePromocionesComponent];
