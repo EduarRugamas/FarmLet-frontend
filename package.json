@@ -19,6 +19,8 @@
     "@angular/platform-browser": "~10.1.6",
     "@angular/platform-browser-dynamic": "~10.1.6",
     "@angular/router": "~10.1.6",
+    "@icon/themify-icons": "^1.0.1-alpha.3",
+    "@popperjs/core": "^2.10.2",
     "bootstrap": "^5.1.3",
     "jquery": "^3.6.0",
     "rxjs": "~6.6.0",

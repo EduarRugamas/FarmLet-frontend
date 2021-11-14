@@ -1,0 +1,77 @@
+.recent {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.activity-grid{
+  display: grid;
+  grid-template-columns: 100%;
+  grid-column-gap: 1.5rem;
+}
+
+.activity-card {
+  background: white;
+  border-radius: 7px;
+  //box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+}
+.activity-card h3 {
+  color: #027581;
+  margin:  1rem;
+}
+
+.activity-card table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.activity-card thead {
+  background: #efefef;
+  text-align: left;
+}
+
+.activity-card tbody {
+  text-align: left;
+}
+
+th, td{
+  font-size: .9rem;
+  padding: .4rem 1rem;
+  color: #1D2231;
+}
+
+td {
+  font-size: .9rem;
+}
+
+
+tbody tr:nth-child(even){
+  background: #f9fafc;
+}
+
+td {
+  border-right: 1px solid #ccc;
+}
+
+th:nth-child(3){
+  text-align: center;
+}
+
+
+.celda-imagen{
+  width: 160px;
+  text-align: center;
+}
+
+.celda-imagen pre{
+  white-space: normal;
+  word-wrap: normal;
+  word-break: keep-all;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  margin-left: 10px;
+  text-align: left;
+}
+
+
+

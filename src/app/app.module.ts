@@ -5,6 +5,9 @@ import { AppRoutingModule, routingComponent } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { FooterComponent } from './Components/footer/footer.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms'
+import { HttpClientModule } from '@angular/common/http';
+import { TableComponent } from './Components/table/table.component';
 
 
 @NgModule({
@@ -12,11 +15,15 @@ import { FooterComponent } from './Components/footer/footer.component';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    routingComponent
+    routingComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
