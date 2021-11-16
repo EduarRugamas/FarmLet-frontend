@@ -6,15 +6,21 @@ import { CreateMedicamentosComponent } from './Pages/create-medicamentos/create-
 import { UpdateMedicamentosComponent } from './Pages/update-medicamentos/update-medicamentos.component';
 import { CreatePromocionesComponent } from './Pages/create-promociones/create-promociones.component';
 import { UpdatePromocionesComponent } from './Pages/update-promociones/update-promociones.component';
+import { DashboardMedicamentosComponent } from './Pages/dashboard-medicamentos/dashboard-medicamentos.component';
+import { DashboardPromocionesComponent } from './Pages/dashboard-promociones/dashboard-promociones.component'
 
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch:'full'},
   { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'dash-medicamentos', component: DashboardMedicamentosComponent },
+  { path: 'dash-promociones', component: DashboardPromocionesComponent },
   { path: 'create-medicamento', component: CreateMedicamentosComponent},
+  { path: 'edit-medicamento/:id', component: UpdateMedicamentosComponent},
   { path: 'edit-medicamento', component: UpdateMedicamentosComponent},
   { path: 'create-promociones', component: CreatePromocionesComponent },
+  { path: 'edit-promociones/:id', component: UpdatePromocionesComponent },
   { path: 'edit-promociones', component: UpdatePromocionesComponent }
 
 ];

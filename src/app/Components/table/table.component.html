@@ -3,59 +3,41 @@
     <!--    tabla de los datos obtenidos desde la base de datos      -->
     <div class="activity-card">
       <h3>Tabla de medicamentos</h3>
+      <div class="table-responsive">
+        <table>
 
-      <table>
+          <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+            <th>Precio</th>
+            <th>Imagen</th>
+            <th>Acciones</th>
+          </tr>
+          </thead>
 
-        <thead>
-        <tr>
-          <th>ID</th>
-          <th>Nombre</th>
-          <th>Descripcion</th>
-          <th>Precio</th>
-          <th>Imagen</th>
-          <th>Acciones</th>
-        </tr>
-        </thead>
-
-        <tbody>
-        <tr>
-          <td>1</td>
-          <td>Acetaminofen</td>
-          <td>Medicamento para el dolor de cabeza</td>
-          <td>$0.50</td>
-          <td>
-            <div class="celda-imagen">
-                <pre>imagen.pngwmwmcmwecmwmcmwcmwcmpwcmwkl;mwmclkmwclmwlcmmcmwclmwcmwmcmw</pre>
-            </div>
-          </td>
-          <td>Editar/Eliminar</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Acetaminofen</td>
-          <td>Medicamento para el dolor de cabeza</td>
-          <td>$0.50</td>
-          <td>
-            <div class="celda-imagen">
-              <pre>imagen.pngwmwmcmwecmwmcmwcmwcmpwcmwerwerwerwerwerwerw</pre>
-            </div>
-          </td>
-          <td>Editar/Eliminar</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Acetaminofen</td>
-          <td>Medicamento para el dolor de cabeza</td>
-          <td>$0.50</td>
-          <td>
-            <div class="celda-imagen">
-              <pre>imagen.pngwmwmcmwecmwmcmwcmwcmpwcmwkl;mwmclkmwclmwlcmmcmwclmwcmwmcmw</pre>
-            </div>
-          </td>
-          <td>Editar/Eliminar</td>
-        </tr>
-        </tbody>
-      </table>
+          <tbody>
+          <tr *ngFor="let lista_table of lista_items">
+            <td>{{lista_table.id}}</td>
+            <td>{{lista_table.nombre}}</td>
+            <td>{{lista_table.descripcion}}</td>
+            <td>${{lista_table.precio}}</td>
+            <td>
+              <div class="celda-imagen">
+                <pre>{{lista_table.imagen}}</pre>
+              </div>
+            </td>
+            <td>
+              <div>
+                <button class="button-editar-item" (click)="editItem(lista_table.id)" >Editar</button>
+                <button class="button-eliminar-item">Eliminar</button>
+              </div>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
     <!--     fin de la table     -->
   </div>

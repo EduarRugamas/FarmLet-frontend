@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { FarmletServerService } from '../../services/api/farmlet-server.service';
+import { Router, ActivatedRoute } from '@angular/router'
 
 @Component({
   selector: 'app-table',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnInit {
+  @Input() lista_items: any;
 
-  constructor() { }
+  constructor( private api:FarmletServerService, private router:Router, private activedRouter:ActivatedRoute ) { }
 
   ngOnInit(): void {
+  }
+
+  editItem(id_item){
+    console.log(id_item)
+    this.router.navigate(['edit-medicamento', id_item]);
   }
 
 }

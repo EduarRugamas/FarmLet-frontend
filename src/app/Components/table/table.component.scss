@@ -48,9 +48,7 @@ tbody tr:nth-child(even){
   background: #f9fafc;
 }
 
-td {
-  border-right: 1px solid #ccc;
-}
+
 
 th:nth-child(3){
   text-align: center;
@@ -66,11 +64,23 @@ th:nth-child(3){
   white-space: normal;
   word-wrap: normal;
   word-break: keep-all;
-  justify-content: center;
-  align-items: center;
-  overflow: auto;
-  margin-left: 10px;
-  text-align: left;
+  //overflow: auto;
+
+}
+
+.table-responsive{
+  overflow-x: auto ;
+}
+
+@media only screen and (max-width: 860px){
+
+  .activity-grid{
+    display: block;
+  }
+
+  .table-responsive{
+    overflow-x: auto ;
+  }
 }
 
 

@@ -8,6 +8,11 @@ import { FooterComponent } from './Components/footer/footer.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http';
 import { TableComponent } from './Components/table/table.component';
+import { DashboardMedicamentosComponent } from './Pages/dashboard-medicamentos/dashboard-medicamentos.component';
+import { DashboardPromocionesComponent } from './Pages/dashboard-promociones/dashboard-promociones.component';
+import { MenuComponent } from './Components/menu/menu.component';
+import { NavbarComponent } from './Components/navbar/navbar.component';
+import { CardComponent } from './Components/card/card.component';
 
 
 @NgModule({
@@ -16,7 +21,12 @@ import { TableComponent } from './Components/table/table.component';
     HeaderComponent,
     FooterComponent,
     routingComponent,
-    TableComponent
+    TableComponent,
+    DashboardMedicamentosComponent,
+    DashboardPromocionesComponent,
+    MenuComponent,
+    NavbarComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
