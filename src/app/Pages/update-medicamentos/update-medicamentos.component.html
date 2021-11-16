@@ -1,1 +1,159 @@
-<p>update-medicamentos works!</p>
+<input type="checkbox" id="sidebar-toggle">
+<div class="sidebar">
+  <div class="sidebar-header">
+    <h3 class="brand">
+      <span class="ti ti-unlink"></span>
+      <span>FarmLet</span>
+    </h3>
+    <label for="sidebar-toggle" class="ti ti-menu-alt"></label>
+  </div>
+
+  <div class="sidebar-menu">
+    <ul>
+      <li>
+        <a href="">
+          <span class="ti ti-dashboard"></span>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/dash-medicamentos" >
+          <span class="ti ti-support"></span>
+          <span>Medicamentos</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/edit-medicamento" >
+          <span class="ti ti-pencil"></span>
+          <span>Editar Medicamentos</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/dash-promociones" >
+          <span class="ti ti-gift"></span>
+          <span>Promociones</span>
+        </a>
+      </li>
+
+      <li>
+        <a routerLink="/edit-promociones" >
+          <span class="ti ti-pencil"></span>
+          <span>Editar Promociones</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <span class="ti ti-headphone-alt"></span>
+          <span>Acerca de</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="main-content">
+  <header>
+    <div class="search-wrapper">
+      <span class="ti ti-search"></span>
+      <input type="search" placeholder="Search">
+    </div>
+    <div class="social-icons">
+      <div></div>
+    </div>
+  </header>
+
+  <main>
+    <!--      <div class="dash-cards">-->
+    <!--          <div class="card-single">-->
+    <!--            <div class="card-body">-->
+    <!--              <span class="ti ti-clipboard"></span>-->
+    <!--              <div>-->
+    <!--                <h5>Registros</h5>-->
+    <!--                <h4>{{this.registros_medicamentos}}</h4>-->
+    <!--              </div>-->
+    <!--            </div>-->
+    <!--          </div>-->
+
+    <!--        <div class="card-single">-->
+    <!--          <div class="card-body">-->
+    <!--            <span class="ti ti-check-box"></span>-->
+    <!--            <div>-->
+    <!--              <h5>Existentes</h5>-->
+    <!--              <h4>15</h4>-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--        </div>-->
+
+    <!--        <div class="card-single">-->
+    <!--          <div class="card-body">-->
+    <!--            <span class="ti ti-na"></span>-->
+    <!--            <div>-->
+    <!--              <h5>No existentes</h5>-->
+    <!--              <h4>5</h4>-->
+    <!--            </div>-->
+
+    <!--          </div>-->
+    <!--        </div>-->
+
+    <!--        <div class="card-single">-->
+    <!--          <div class="card-body">-->
+    <!--            <span class="ti ti-na"></span>-->
+    <!--            <div>-->
+    <!--              <h5>No existentes</h5>-->
+    <!--              <h4>5</h4>-->
+    <!--            </div>-->
+
+    <!--          </div>-->
+    <!--        </div>-->
+    <!--      </div>-->
+
+    <!--      <section class="recent">-->
+    <!--        <div class="activity-grid">-->
+    <!--          &lt;!&ndash;    tabla de los datos obtenidos desde la base de datos      &ndash;&gt;-->
+    <!--          <div class="activity-card">-->
+    <!--            <h3>Tabla de medicamentos</h3>-->
+    <!--            <div class="table-responsive">-->
+    <!--              <table>-->
+
+    <!--                <thead>-->
+    <!--                <tr>-->
+    <!--                  <th>ID</th>-->
+    <!--                  <th>Nombre</th>-->
+    <!--                  <th>Descripcion</th>-->
+    <!--                  <th>Precio</th>-->
+    <!--                  <th>Imagen</th>-->
+    <!--                  <th>Acciones</th>-->
+    <!--                </tr>-->
+    <!--                </thead>-->
+
+    <!--                <tbody>-->
+    <!--                <tr *ngFor="let list_medicamento of lista_medicamentos_all">-->
+    <!--                  <td>{{list_medicamento.id}}</td>-->
+    <!--                  <td>{{list_medicamento.nombre}}</td>-->
+    <!--                  <td>{{list_medicamento.descripcion}}</td>-->
+    <!--                  <td>${{list_medicamento.precio}}</td>-->
+    <!--                  <td>-->
+    <!--                    <div class="celda-imagen">-->
+    <!--                      <pre>{{list_medicamento.imagen}}</pre>-->
+    <!--                    </div>-->
+    <!--                  </td>-->
+    <!--                  <td>-->
+    <!--                    <div>-->
+    <!--                      <button class="button-editar-item" (click)="editItem(list_medicamento.id)" >Editar</button>-->
+    <!--                      <button class="button-eliminar-item">Eliminar</button>-->
+    <!--                    </div>-->
+    <!--                  </td>-->
+    <!--                </tr>-->
+    <!--                </tbody>-->
+    <!--              </table>-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--          &lt;!&ndash;     fin de la table     &ndash;&gt;-->
+    <!--        </div>-->
+    <!--      </section>-->
+        <app-table-edit [lista_items]="this.lista_medicamentos_all" ></app-table-edit>
+  </main>
+  <router-outlet></router-outlet>
+</div>
+
+

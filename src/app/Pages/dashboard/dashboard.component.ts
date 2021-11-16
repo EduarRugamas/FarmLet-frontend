@@ -10,20 +10,15 @@ import { ListMedicamentosInterface } from '../../models/listMedicamentos.interfa
 })
 export class DashboardComponent implements OnInit {
 
-  // lista_medicamentos_all: ListMedicamentosInterface[];
-  // registros_medicamentos
-
   constructor( private router:Router, private api:FarmletServerService) { }
+  registros_medicamentos
+  registros_promociones = 10
 
   ngOnInit(): void {
-    // this.api.getMedicamentosAll().subscribe(data => {
-    //   console.log(data)
-    //   this.lista_medicamentos_all = data;
-    //   this.registros_medicamentos = this.lista_medicamentos_all.length
-    // });
+    this.api.getMedicamentosAll().subscribe(data => {
+      console.log(data)
+      this.registros_medicamentos = data.length
+    });
   }
-
-
-
 
 }

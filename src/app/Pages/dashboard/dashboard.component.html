@@ -64,7 +64,11 @@
 
     <main>
       <h2 class="dash-title">Registros de Medicamentos y Promociones</h2>
-      <app-card></app-card>
+
+      <h2 class="dash-title-medicamentos">Registros de Medicamentos</h2>
+      <app-card [registros]="registros_medicamentos" ></app-card>
+      <h2 class="dash-title-promociones">Registros de Promociones</h2>
+      <app-card [registros]="registros_promociones" ></app-card>
 <!--      <div class="dash-cards">-->
 <!--          <div class="card-single">-->
 <!--            <div class="card-body">-->

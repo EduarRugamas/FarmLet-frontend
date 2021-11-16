@@ -13,6 +13,8 @@ import { DashboardPromocionesComponent } from './Pages/dashboard-promociones/das
 import { MenuComponent } from './Components/menu/menu.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { CardComponent } from './Components/card/card.component';
+import { TableEditComponent } from './Components/table-edit/table-edit.component';
+import { EditItemsMedicamentoComponent } from './Pages/edit-items-medicamento/edit-items-medicamento.component';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { CardComponent } from './Components/card/card.component';
     DashboardPromocionesComponent,
     MenuComponent,
     NavbarComponent,
-    CardComponent
+    CardComponent,
+    TableEditComponent,
+    EditItemsMedicamentoComponent
   ],
   imports: [
     BrowserModule,

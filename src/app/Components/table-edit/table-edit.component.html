@@ -13,6 +13,7 @@
             <th>Descripcion</th>
             <th>Precio</th>
             <th>Imagen</th>
+            <th>Acciones</th>
           </tr>
           </thead>
 
@@ -25,6 +26,12 @@
             <td>
               <div class="celda-imagen">
                 <pre>{{lista_table.imagen}}</pre>
+              </div>
+            </td>
+            <td>
+              <div>
+                <button class="button-editar-item" (click)="editItem(lista_table.id)" >Editar</button>
+                <button class="button-eliminar-item">Eliminar</button>
               </div>
             </td>
           </tr>
