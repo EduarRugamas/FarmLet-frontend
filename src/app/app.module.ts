@@ -17,6 +17,7 @@ import { TableEditComponent } from './Components/table-edit/table-edit.component
 import { EditItemsMedicamentoComponent } from './Pages/edit-items-medicamento/edit-items-medicamento.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

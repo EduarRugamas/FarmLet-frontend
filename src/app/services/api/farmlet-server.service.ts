@@ -30,4 +30,9 @@ export class FarmletServerService {
     return this.http.get<MedicamentoInterface>(url_get_medicamento);
   }
 
+  updateMedicamento(updateMedicamento:MedicamentoInterface): Observable<ResponseInterface>{
+    let url_update_medicamento = this.url + "/medicamento/update/";
+    return
+  }
+
 }

@@ -1,1 +1,26 @@
-<p>edit-items-medicamento works!</p>
+<div class="container">
+  <form [formGroup]="this.FormMedicamento" (ngSubmit)="updateRegistro(FormMedicamento.value)">
+        <div class="form-group ">
+          <div class="col">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" class="form-control" placeholder="Nombre del medicamento" formControlName="nombre">
+          </div>
+          <div class="col">
+            <label for="descripcion">Descripcion</label>
+            <input type="text" id="descripcion" class="form-control" placeholder="Descripcion del medicamento" formControlName="descripcion">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col">
+            <label for="precio">Precio</label>
+            <input type="number" id="precio" class="form-control" placeholder="Precio del medicamento" formControlName="precio">
+          </div>
+          <div class="col">
+            <label for="imagen">Imagen</label>
+            <input type="text" id="imagen" class="form-control" placeholder="Imagen del medicamento" formControlName="imagen">
+          </div>
+        </div>
+    <br><br>
+    <button type="submit" class="btn btn-primary">Actualizar registro</button>
+  </form>
+</div>

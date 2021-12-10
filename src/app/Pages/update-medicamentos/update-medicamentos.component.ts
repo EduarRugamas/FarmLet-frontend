@@ -11,37 +11,16 @@ import { ListMedicamentosInterface } from '../../models/listMedicamentos.interfa
   styleUrls: ['./update-medicamentos.component.scss']
 })
 export class UpdateMedicamentosComponent implements OnInit {
-
   lista_medicamentos_all: ListMedicamentosInterface[];
 
   constructor( private router:Router, private activatedRoute:ActivatedRoute, private api:FarmletServerService ) { }
 
-  datosMedicamento: MedicamentoInterface;
-  editarMedicamento = new FormGroup({
-    nombre: new  FormControl(''),
-    descripcion: new FormControl(''),
-    precio: new FormControl(''),
-    imagen: new FormControl('')
-  });
-
   ngOnInit(): void {
-    let MedicamentoId = this.activatedRoute.snapshot.paramMap.get('id');
-    let token = this.getToken();
-    console.log(`${MedicamentoId}, ${token}`);
-    this.api.getMedicamento(MedicamentoId).subscribe( data => {
-      this.datosMedicamento = data[0];
-      console.log(data);
-    });
-
+    //obtener todos los items de la base de datos
     this.api.getMedicamentosAll().subscribe(data => {
       console.log(data)
       this.lista_medicamentos_all = data;
     });
   }
-
-  getToken(){
-    return localStorage.getItem('token');
-  }
-
 
 }
